@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-// import all needed components
-import coachdetail from "@/components/coaches/CoachesDetail";
-import coacheslist from "@/components/coaches/CoachesList";
+import coachdetail from "@/components/coaches/CoachDetail";
+import coacheslist from "@/components/coaches/CoachList";
 import coachregistration from "@/components/coaches/CoachRegistration";
 import contactcoach from "@/components/requests/ContactCoach";
 import requestreceived from "@/components/requests/RequestReceived";
@@ -11,16 +10,15 @@ import notfound from "@/components/404";
 const routes = [
 	{
 		path: "/",
-		redirect: "/coaches",
+		redirect: "/coach",
 	},
 	{
-		path: "/coaches",
+		path: "/coach",
 		component: coacheslist,
 	},
 	{
-		path: "/coaches/:id",
+		path: "/coach/:id",
 		component: coachdetail,
-		// nested routes
 		children: [
 			{
 				path: "contact",
