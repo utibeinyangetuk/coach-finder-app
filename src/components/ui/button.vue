@@ -10,7 +10,7 @@
 <script>
 	export default {
 		props: {
-			// mode prop to control the styling of the button
+			// mode prop to control the styling
 			mode: {
 				type: String,
 				required: false,
